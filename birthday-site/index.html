@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday 🎉</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1 class="hidden">Birthday Surprise</h1>
+  </header>
+
+  <main id="app">
+    <!-- Phase 1: Countdown -->
+    <section id="countdown-phase" class="phase active" style="background-image: url('./all-assets/background.jpeg');">
+      <p class="subtext top">Counting down to the most special day ever 💜</p>
+      <div id="countdown-timer">
+        <div class="time-box"><span id="days">00</span><small>Days</small></div>
+        <div class="time-box"><span id="hours">00</span><small>Hours</small></div>
+        <div class="time-box"><span id="minutes">00</span><small>Minutes</small></div>
+        <div class="time-box"><span id="seconds">00</span><small>Seconds</small></div>
+      </div>
+      <p class="subtext bottom">SHH... A MAGICAL SURPRISE IS LOADING FOR YOU.</p>
+    </section>
+
+    <!-- Phase 2: Controls -->
+    <section id="reveal-phase" class="phase hidden">
+      <p class="reveal-text">The journey begins...</p>
+      <div class="button-group">
+        <button id="cake-btn" aria-label="Cake Ceremony">🎂 Cake Ceremony</button>
+        <button id="lyrics-btn" aria-label="Song Lyrics">🎵 Song Lyrics</button>
+      </div>
+    </section>
+
+    <!-- Phase 3: Cake Video -->
+    <section id="cake-phase" class="phase hidden">
+      <video id="cake-video" src="./all-assets/cake_video.mp4" preload="auto"></video>
+      <div id="cake-popup" class="popup hidden"></div>
+      <img id="confetti" class="hidden" src="./all-assets/confetti.gif" alt="Confetti celebration">
+      <p id="birthday-message" class="hidden">Happy 17th Birthday, Qalbi❤!</p>
+    </section>
+
+    <!-- Phase 4: Lyrics -->
+    <section id="lyrics-phase" class="phase hidden">
+      <div id="lyrics-container"></div>
+    </section>
+
+    <!-- Phase 5: Finale -->
+    <section id="finale-phase" class="phase hidden">
+      <p class="finale-message">Seventeen looks good on you, kitty 🐼💜</p>
+      <img src="./all-assets/monkey.gif" alt="Monkey hug" class="finale-gif">
+      <div id="sparkles"></div>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <!-- Audio Elements -->
+  <audio id="birthday-music" src="./all-assets/birthday_music.mp3" loop></audio>
+  <audio id="perfect-song" src="./all-assets/perfect.mp3"></audio>
+
+  <!-- JS -->
+  <script src="./script.js" defer></script>
+</body>
+</html>
